@@ -17,3 +17,4 @@ function logout() {
     alert("Đăng xuất thành công!");
     window.location.href = "../login/login.html?_ijt=4a1bnsk23n76sb35cn500sh8e8&_ij_reload=RELOAD_ON_SAVE"; // Chuyển về trang đăng nhập
 }
+////////////////
