@@ -23,8 +23,8 @@ let newsList = [
 ];;
 
 let currentNewsPage = 1;
-let itemsPerPageNews = 7;
-function showNews() {
+let itemsPerPageNews = 9;
+function newsController() {
 
     newsList.sort((a, b) => a.id - b.id);
 
@@ -81,14 +81,14 @@ function renderPaginationNew() {
 
 function changePageNews(page) {
     currentNewsPage = page;
-    showNews();
+    newsController();
 }
 
 // Hàm xóa tin tức
 function deleteNews(id) {
     if (confirm("Bạn có chắc chắn muốn xóa tin tức này không?")) {
         newsList = newsList.filter(news => news.id !== id);
-        showNews();
+        newsController();
     }
 }
 
@@ -100,7 +100,7 @@ function editNews(id) {
         let newContent = prompt("Nhập nội dung mới:", news.content);
         if (newTitle !== null) news.title = newTitle.trim();
         if (newContent !== null) news.content = newContent.trim();
-        showNews();
+        newsController();
     }
 }
 

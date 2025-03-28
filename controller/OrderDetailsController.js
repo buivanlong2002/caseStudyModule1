@@ -16,6 +16,9 @@ let products6 = [
     [20, 'Xà Lách', 'xa_lach.jpg', 18000 , 'Xà lách tươi giòn', 9, 11],
     [18,'Súp Lơ', 'sup_lo.jpg', 28000, 'Súp lơ xanh tươi', 12, 8]
 ];
+
+
+
 let orderDetailsPage = 1;
 let orderDetailsPerPage = 2; // Số đơn hàng trên mỗi tran
 let orderDetail = [
@@ -30,6 +33,10 @@ let orderDetail = [
     new OrderDetails(9,products8,'2.700.000' ,"27-03-2025"),
     new OrderDetails(10,products6,'2.700.000' ,"27-03-2025")
 ];
+
+
+console.log(orderDetail);
+
 function showOrderDetails(page = 1) {
     orderDetailsPage = page;
     orderDetail.sort((a, b) => a.id - b.id);

@@ -4,10 +4,10 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
     }
 
-    showHome();
+    home();
 });
 
-function showHome() {
+function home() {
     const content = `
         <div class="welcome-container">
             <h1 class="welcome-title">🎉 Xin chào! Chào mừng bạn đến với Admin 🎉</h1>
@@ -18,4 +18,4 @@ function showHome() {
     document.getElementById("mainContent").innerHTML = content;
 }
 
-window.onload = showHome;
+window.onload = home;

@@ -13,12 +13,13 @@
 <div id="sidebar">
     <h2>ADMIN WEB NÔNG SẢN</h2>
     <ul>
-        <li onclick="showHome()">Tổng quan</li>
+        <li onclick="home()">Tổng quan</li>
+        <li onclick="showUsers()">Người dùng</li>
         <li onclick="showProducts()">Danh Sách Sản Phẩm</li>
         <li onclick="showOrder()">Đơn Hàng  </li>
         <li onclick="showOrderDetails()">Chi Tiết Đơn Hàng</li>
         <li onclick="showReviews()">Review</li>
-        <li onclick="showNews()">Tin tức</li>
+        <li onclick="newsController()">Tin tức</li>
         <li onclick="logout()">Đăng xuất</li>
     </ul>
 </div>
@@ -33,14 +34,23 @@
 <script  src="../model/OrderDetails.js"></script>
 <script  src="../model/Review.js"></script>
 <script  src="../model/News.js"></script>
+<script  src="../model/User.js"></script>
 
-<script  src="../controller/ShowHome.js"></script>
-<script  src="../controller/ShowProduct.js"></script>
+
+<script  src="../service/UserService.js"></script>
+<script  src="../service/ProductService.js"></script>
+
+<script  src="../controller/Home.js"></script>
+<script  src="../controller/ProductController.js"></script>
 <script  src="../controller/ShowOrder.js"></script>
-<script  src="../controller/OrderDetails.js"></script>
-<script  src="../controller/ShowReview.js"></script>
-<script  src="../controller/ShowNews.js"></script>
+<script  src="../controller/OrderDetailsController.js"></script>
+<script  src="../controller/ReViewController.js"></script>
+<script  src="../controller/NewsController.js"></script>
+<script  src="../controller/UserController.js"></script>
+
 <script  src="../login/login.js"></script>
+
+
 
 </body>
 

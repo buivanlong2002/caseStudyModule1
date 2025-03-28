@@ -14,7 +14,7 @@ let reviews = [
 
 ];
 let currentReviewPage = 1;
-let itemsPerPageReview = 7;
+let itemsPerPageReview = 9;
 function showReviews() {
 
     reviews.sort((a, b) => a.id -b.id);
