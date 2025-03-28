@@ -324,3 +324,13 @@ th {
     from { opacity: 1; }
     to { opacity: 0.5; }
 }
+.input-product{
+    width: 70%;
+    padding: 4px;
+    margin: 3px 0;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: border 0.3s ease-in-out;
+}
