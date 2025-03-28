@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Web Nông Sản</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+
+<!-- Sidebar -->
+<div id="sidebar">
+    <h2>ADMIN WEB NÔNG SẢN</h2>
+    <ul>
+        <li onclick="showHome()">Tổng quan</li>
+        <li onclick="showProducts()">Danh Sách Sản Phẩm</li>
+        <li onclick="showOrder()">Đơn Hàng  </li>
+        <li onclick="showOrderDetails()">Chi Tiết Đơn Hàng</li>
+        <li onclick="showReviews()">Review</li>
+        <li onclick="showNews()">Tin tức</li>
+        <li onclick="logout()">Đăng xuất</li>
+    </ul>
+</div>
+
+<!-- Main content -->
+
+<div id="mainContent">
+</div>
+
+<script  src="../model/Products.js"></script>
+<script  src="../model/Transaction.js"></script>
+<script  src="../model/OrderDetails.js"></script>
+<script  src="../model/Review.js"></script>
+<script  src="../model/News.js"></script>
+
+<script  src="../controller/ShowHome.js"></script>
+<script  src="../controller/ShowProduct.js"></script>
+<script  src="../controller/ShowOrder.js"></script>
+<script  src="../controller/OrderDetails.js"></script>
+<script  src="../controller/ShowReview.js"></script>
+<script  src="../controller/ShowNews.js"></script>
+<script  src="../login/login.js"></script>
+
+</body>
+
+</html>

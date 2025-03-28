@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #4A90E2, #243bd1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .login-container {
+      width: 350px;
+      padding: 25px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    h2 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    input {
+      width: 92%;
+      padding: 12px;
+      margin: 12px 0;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #0022ff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 6px;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #0022ff;
+    }
+
+    .logout-btn {
+      background: #dc3545;
+      margin-top: 20px;
+    }
+
+    .logout-btn:hover {
+      background: #b02a37;
+    }
+
+  </style>
+</head>
+<body>
+
+<div id="loginPage">
+  <div class="login-container">
+    <h2>Admin Đăng Nhập</h2>
+    <input type="text" id="username" placeholder="Tên đăng nhập">
+    <input type="password" id="password" placeholder="Mật khẩu">
+    <button onclick="Login()">Đăng nhập</button>
+  </div>
+</div>
+
+<div id="adminPage" style="display: none;">
+  <h2>Chào mừng đến Admin Panel</h2>
+  <button class="logout-btn" onclick="logout()">Đăng xuất</button>
+</div>
+
+<script src="login.js">
+
+</script>
+
+</body>
+</html>

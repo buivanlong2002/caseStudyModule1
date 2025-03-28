@@ -1,0 +1,326 @@
+body {
+    display: flex;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f4f4;
+}
+
+/* Sidebar */
+#sidebar {
+    width: 250px;
+    background: #0c356a;
+    color: white;
+    height: 100vh;
+    padding: 20px;
+    transition: width 0.3s;
+}
+
+#sidebar h2 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#sidebar ul li {
+    padding: 12px 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+#sidebar ul li:hover {
+    background: #1e4976;
+    padding-left: 20px;
+    transition: 0.3s;
+}
+
+/* Main Content */
+#mainContent {
+    flex: 1;
+    padding: 20px;
+    background: #f4f4f4;
+    max-height: 1300px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background: white;
+}
+
+/* Định dạng container cho mỗi đơn hàng */
+.order-container {
+    width: 90%;
+    margin: 10px auto;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    padding: 10px;
+    background: white;
+    min-height: 200px; /* Định kích thước tối thiểu cho đơn hàng */
+    max-height: 200px; /* Định kích thước tối đa */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Danh sách sản phẩm trong đơn hàng */
+.product-list {
+    flex: 1;
+    overflow-y: auto;
+    max-height: 20px; /* Giữ chiều cao cố định */
+    padding: 5px;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+th, td {
+    padding: 6px 10px;
+    text-align: center;
+}
+
+.product-img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.total-row {
+    font-size: 13px;
+}
+
+/* Buttons */
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+/* Nút sửa */
+.edit-btn {
+    background: #007bff;
+}
+
+.edit-btn:hover {
+    background: #0056b3;
+}
+
+/* Nút xóa */
+.delete-btn {
+    background: #dc3545;
+}
+
+.delete-btn:hover {
+    background: #a71d2a;
+}
+
+fieldset input:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0px 0px 8px rgba(76, 175, 80, 0.5);
+}
+
+fieldset button {
+    width: 48%;
+    margin-top: 10px;
+}
+
+/* Style cho ô input */
+.input-field {
+    width: 98%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: border 0.3s ease-in-out;
+}
+
+.input-field:focus {
+    border-color: #007bff;
+}
+
+/* Style cho nút */
+.btn {
+    background: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 200px;
+    text-align: center;
+    display: inline-block;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+/* Hiệu ứng fade-in */
+.fade-out {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.3s ease-in, transform 0.3s ease-in;
+}
+
+.welcome-container {
+    text-align: center;
+    padding: 50px;
+    background: linear-gradient(135deg, #14206a, #6c7bdd);
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 1500px;
+    height: 90vh;
+    margin: auto;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.welcome-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.welcome-text {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.welcome-image {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/*@keyframes fadeIn {*/
+/*    from {*/
+/*        opacity: 0;*/
+/*        transform: translateY(-20px);*/
+/*    }*/
+/*    to {*/
+/*        opacity: 1;*/
+/*        transform: translateY(0);*/
+/*    }*/
+/*}*/
+
+.welcome-container img {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+.pagination-container{
+    text-align: center; margin-top: 10px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    background: white;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+.order-row {
+    background-color: #f9f9f9;
+}
+
+.inner-table {
+    max-height: 200px;
+    overflow-y: auto;
+    display: block;
+}
+
+.inner-table tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.product-img {
+    width: 50px;
+    height: auto;
+}
+
+.total-row {
+    background-color: #f1f1f1;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.edit-btn {
+    margin: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+}
+
+.edit-btn:hover {
+    background-color: #0056b3;
+}
+
+#pagination {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.fade-in {
+    animation: fadeIn 0.3s ease-in;
+}
+
+.fade-out {
+    animation: fadeOut 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0.5; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0.5; }
+}
