@@ -1,18 +1,7 @@
+let reviewService = new ReviewService();
 
-let reviews = [
-    new Review(1, "Nguyễn Văn An", "an@gmail.com", 5, "Sản phẩm rất tốt!", "2025-03-25"),
-    new Review(2, "Bùi Văn Long", "long@gmail.com", 5, "Hàng giao nhanh, chất lượng ổn.", "2025-03-26"),
-    new Review(3, "Trần Thị Mai", "mai@gmail.com", 3, "Mùi vị ngon, nhưng hơi đắt.", "2025-03-24"),
-    new Review(4, "Phạm Minh Khoa", "khoa@gmail.com", 8, "Dùng rất thích, sẽ mua tiếp!", "2025-03-27"),
-
-    new Review(5, "Hoàng Văn Tiến", "tien@gmail.com", 6, "Sản phẩm đẹp hơn mong đợi!", "2025-03-23"),
-    new Review(6, "Lê Thị Hạnh", "hanh@gmail.com", 2, "Giao hàng hơi chậm, nhưng chất lượng tốt.", "2025-03-22"),
-    new Review(7, "Đỗ Minh Châu", "chau@gmail.com", 7, "Giá cả hợp lý, mình sẽ mua lại.", "2025-03-21"),
-    new Review(8, "Nguyễn Văn Dũng", "dung@gmail.com", 4, "Tạm ổn, chất liệu chưa như mong muốn.", "2025-03-20"),
-    new Review(9, "Trịnh Hoài Nam", "nam@gmail.com", 1, "Hàng bị móp khi nhận, mong shop cải thiện.", "2025-03-19"),
-    new Review(10, "Lý Thị Lan", "lan@gmail.com", 9, "Hàng như hình, rất hài lòng!", "2025-03-18")
-
-];
+let reviews= reviewService.getAllReviews();
+console.log(reviews);
 let currentReviewPage = 1;
 let itemsPerPageReview = 9;
 function showReviews() {
@@ -87,6 +76,7 @@ function changePageReviews(page) {
 function deleteReview(id) {
     if (confirm("Bạn có chắc chắn muốn xóa đánh giá này không?")) {
         reviews = reviews.filter(review => review.id !== id);
+        reviewService.deleteReview(id , reviews)
         showReviews(); // Cập nhật lại danh sách sau khi xóa
     }
 }
@@ -97,7 +87,7 @@ function editReview(id) {
     if (review) {
         let newContent = prompt("Nhập nội dung mới:", review.content);
         if (newContent !== null) {
-            review.content = newContent.trim(); // Cập nhật nội dung review
+            reviewService.updateReview(newContent);
             showReviews(); // Cập nhật lại danh sách
         }
     }

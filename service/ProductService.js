@@ -69,8 +69,8 @@ class ProductService {
         localStorage.removeItem(this.storageKey);
     }
 }
-let productService1 = new ProductService();
-
+// let productService1 = new ProductService();
+//
 // productService1.deleteAllProducts();
 //
 //
@@ -95,5 +95,5 @@ let productService1 = new ProductService();
 // productService1.addProduct(new Products( "Súp Lơ", "sup_lo.jpg", "28.000 VNĐ", "Súp lơ xanh tươi", 12, 80));
 // productService1.addProduct(new Products( "Thanh Long", "thanh_long.jpg", "30.000 VNĐ", "Thanh long ruột đỏ", 20, 120));
 // productService1.addProduct(new Products( "Xà Lách", "xa_lach.jpg", "18.000 VNĐ", "Xà lách tươi giòn", 22, 110));
-
-console.log(productService1.getProducts());
+//
+// console.log(productService1.getProducts());
