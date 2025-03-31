@@ -1,7 +1,7 @@
 let userService = new UserService();
 let userList = userService.getUsers();
 let currentPageUser = 1;
-let itemsPerPageUser = 10;
+let itemsPerPageUser = 12;
 
 function showUsers() {
     userList.sort((a, b) => a.id - b.id);
