@@ -6,7 +6,7 @@ function Login() {
 
     if (user === "admin" && pass === "123") {
         sessionStorage.setItem("loggedIn", "true");
-        window.location.href = "../view/index.html?_ijt=v6jv5bogu45ps4qsmh3c34ohdu&_ij_reload=RELOAD_ON_SAVE"; // Kiểm tra lại đường dẫn
+        window.location.href = "../index.html"; // Kiểm tra lại đường dẫn
     } else {
         alert("Sai tên đăng nhập hoặc mật khẩu!");
     }
